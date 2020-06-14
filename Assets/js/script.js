@@ -23,7 +23,7 @@ function initQuiz() {
     
         function startQuiz() {
                 
-            landingContainerEl.setAttribute("class","container d-none");
+            landingContainerEl.setAttribute("class","container hide");
             var rowEl = null;
             var colEl = null;
             var headerEl = null;
@@ -42,7 +42,7 @@ function initQuiz() {
                     clearInterval(myInterval);
 
                     //  When the final question is answered or the timer reaches zero, the quiz container is hidden and the score container is displayed, where the user enters their initials
-                    quizContainerEl.setAttribute("class","container d-none");
+                    quizContainerEl.setAttribute("class","container hide");
                     finalContainerEl.setAttribute("class","container");
                     return;
                 }
@@ -62,7 +62,7 @@ function initQuiz() {
                 rowEl.append(colEl);
 
                 colEl = document.createElement("div");
-                colEl.setAttribute("class","col-12 col-sm-8");
+                colEl.setAttribute("class","cl-12 col-sm-8");
                 rowEl.append(colEl);
 
                 colEl = document.createElement("div");
@@ -71,11 +71,11 @@ function initQuiz() {
 
                 colEl = rowEl.children[1];
                 rowEl = document.createElement("div");
-                rowEl.setAttribute("class","row mb-3");
+                rowEl.setAttribute("class","row margin-02");
                 colEl.append(rowEl);
 
                 colEl = document.createElement("div");
-                colEl.setAttribute("class","col-12");
+                colEl.setAttribute("class","cl-12");
                 rowEl.append(colEl);
 
                 headerEl = document.createElement("h2");
@@ -89,11 +89,11 @@ function initQuiz() {
                     colEl.append(rowEl);
 
                     var colEl2 = document.createElement("div");
-                    colEl2.setAttribute("class","col-12");
+                    colEl2.setAttribute("class","cl-12");
                     rowEl.append(colEl2);
 
                     buttonEl = document.createElement("button");
-                    buttonEl.setAttribute("class","btn btn-primary");
+                    buttonEl.setAttribute("class","btn btn-01");
                     buttonEl.setAttribute("type","button");
                     buttonEl.innerHTML = questions[currentQuestion-1].choices[i];
                     colEl2.append(buttonEl);
@@ -110,7 +110,7 @@ function initQuiz() {
                         colEl.append(rowEl);
 
                         colEl = document.createElement("div");
-                        colEl.setAttribute("class","col-12");
+                        colEl.setAttribute("class","cl-12");
                         rowEl.append(colEl);
 
                         var parEl = document.createElement("p");
@@ -133,7 +133,7 @@ function initQuiz() {
                             // When an answer is chosen, pause the timer and show the result for 2 seconds before loading the next question
                             if (currentQuestion>questions.length) {
                                 // Move to the results page
-                                quizContainerEl.setAttribute("class","container d-none");
+                                quizContainerEl.setAttribute("class","container hide");
                                 finalContainerEl.setAttribute("class","container");
                                 finalScoreEl.setAttribute("value",score);
                             } else {
@@ -142,7 +142,7 @@ function initQuiz() {
                                 myInterval = setInterval(function() {
                                     if (timeRemaining<1) {
                                         clearInterval(myInterval);
-                                        quizContainerEl.setAttribute("class","container d-none");
+                                        quizContainerEl.setAttribute("class","container hide");
                                         finalContainerEl.setAttribute("class","container");
                                         return;
                                     }
@@ -175,9 +175,9 @@ function initQuiz() {
         startButtonEl.addEventListener("click",startQuiz);
 
         highscoreButtonEl.addEventListener("click",function() {
-            landingContainerEl.setAttribute("class","container d-none");
-            quizContainerEl.setAttribute("class","container d-none");
-            finalContainerEl.setAttribute("class","container d-none");
+            landingContainerEl.setAttribute("class","container hide");
+            quizContainerEl.setAttribute("class","container hide");
+            finalContainerEl.setAttribute("class","container hide");
             highscoreContainerEl.setAttribute("class","container");
             var colEl = document.getElementById("highscore-table");
             for (i=0; i<highScores.length; i++) {
@@ -186,7 +186,7 @@ function initQuiz() {
                 colEl.append(rowEl);
 
                 var colEl2 = document.createElement("div");
-                colEl2.setAttribute("class","col-12 text-center");
+                colEl2.setAttribute("class","cl-12 text-center");
                 rowEl.append(colEl2);
 
                 var parEl = document.createElement("div");

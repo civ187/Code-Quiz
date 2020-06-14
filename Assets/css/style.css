@@ -3,8 +3,6 @@
 }
 
 :root {
-
-    
     --breakpoint-xs: 0;
     --breakpoint-sm: 576px;
     --breakpoint-md: 768px;
@@ -19,7 +17,6 @@ html {
 
 body {
     margin: 0;
-    /* font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; */
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -57,16 +54,16 @@ nav, div {
     padding: .5rem 1rem;
 }
 
-.navbar-expand-lg {
+.nav-exp-lg {
     flex-flow: row nowrap;
     justify-content: flex-start;
 }
 
-.navbar-container {
+.nav-container {
     max-width: none;
 }
 
-.navbar-expand-lg > .container, .navbar-expand-lg > .container-fluid {
+.nav-exp-lg > .container, .nav-exp-lg > .container-fluid {
     flex-wrap: nowrap;
 }
 
@@ -91,10 +88,10 @@ nav, div {
     margin-left: auto;
 }
 
-.ml-0, .mx-0 {
+.ml-0, .margin-01 {
     margin-left: 0 !important;
 }
-.mr-0, .mx-0 {
+.mr-0, .margin-01 {
     margin-right: 0 !important;
 }
 
@@ -105,11 +102,11 @@ nav, div {
     margin-left: -15px;
 }
 
-.w-100 {
+.width-100 {
     width: 100% !important;
 }
 
-.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+.col, .col-1, .col-10, .col-11, .cl-12, .cl-01, .cl-02, .cl-03, .cl-04, .col-6, .col-7, .cl-05, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .cl-md-01, .cl-md-02, .col-md-4, .col-md-5, .col-md-6, .cl-md-03, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .cl-sm-01, .col-sm-6, .cl-sm-02, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
     position: relative;
     width: 100%;
     padding-right: 15px;
@@ -131,17 +128,10 @@ nav, div {
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
-   /*  background-color: transparent;
-    border: 1px solid transparent;
-       /*  border-top-color: transparent;
-        border-right-color: transparent;
-        border-bottom-color: transparent;
-        border-left-color: transparent; */
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
     border-radius: .25rem;
-    /* transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out; */
 }
 
 .btn-info {
@@ -150,7 +140,7 @@ nav, div {
     border-color: #17a2b8;
 }
 
-.btn-primary {
+.btn-01 {
 	color: #fff;
 	background-color: #007bff;
 	border-color: #007bff;
@@ -165,7 +155,7 @@ button, select {
 button, input {
     overflow: visible;
 }
-button, input, optgroup, select, textarea {
+button, input {
     margin: 0;
     font-family: inherit;
     font-size: inherit;
@@ -175,11 +165,11 @@ button {
     border-radius: 0;
 }
 
-.form-group {
+.frm-group {
     margin-bottom: 1rem;
 }
 
-.col-form-label {
+.cl-frm-label {
     padding-top: calc(.375rem + 1px);
     padding-bottom: calc(.375rem + 1px);
     margin-bottom: 0;
@@ -193,17 +183,17 @@ label {
     margin-bottom: .5rem;
 }
 
-.form-control::placeholder {
+.frm-ctrl::placeholder {
     color: #6c757d;
     opacity: 1;
 }
 
-.form-control:disabled, .form-control[readonly] {
+.frm-ctrl:disabled, .frm-ctrl[readonly] {
     background-color: #e9ecef;
     opacity: 1;
 }
 
-.form-control {
+.frm-ctrl {
     display: block;
     width: 100%;
     height: calc(1.5em + .75rem + 2px);
@@ -220,22 +210,19 @@ label {
 }
 
 button, input {
-    overflow: visible;
-}
-
-button, input, optgroup, select, textarea {
     margin: 0;
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
+    overflow: visible;
 }
 
-.mb-1, .my-1 {
+.mb-1 {
 	margin-bottom: .25rem !important;
 }
 
 
-.mb-3, .my-3 {
+.margin-02 {
     margin-bottom: 1rem !important;
 }
 
@@ -250,13 +237,13 @@ button, input, optgroup, select, textarea {
 	border-radius: .3rem;
 }
 
-.btn-secondary {
+.btn-02 {
 	color: #fff;
 	background-color: #6c757d;
 	border-color: #6c757d;
 }
 
-.d-none {
+.hide {
 	display: none !important;
 }
 
@@ -282,73 +269,73 @@ button, input, optgroup, select, textarea {
 
 
 @media (max-width: 1140){
-.col-2 {
+.cl-01 {
 	
 	display: flex;
 	max-width: 16%;}
 }
 
 @media (max-width: 1140){
-.col-3 {    
+.cl-02 {    
     flex: 0 0 25%;
     max-width: 25%;}
 }
 
 @media (max-width: 1140){
-.col-4 {
+.cl-03 {
     flex: 0 0 33%;
     max-width: 33%;}
 }
 
 @media (max-width: 1140){
-.col-5 {
+.cl-04 {
     
     flex: 0 0 41%;
     max-width: 41%;}
 }
 
 @media (max-width: 1140){
-.col-8 {
+.cl-05 {
 	flex: 0 0 66%;
 	max-width: 66%;}
 }
 
 @media (max-width: 1140){
-.col-12 {
+.cl-12 {
     flex: 0 0 100%;
     max-width: 100%;}
 }
 
-.col-md-2 {
+.cl-md-01 {
     flex: 0 0 16%;
     max-width: 16%;
 }
 
-.col-md-3 {
+.cl-md-02 {
     flex: 0 0 25%;
     max-width: 25%;
 }
 
-.col-md-7 {
+.cl-md-03 {
     flex: 0 0 58%;
     max-width: 58%;
 }
 
 @media (min-width: 576px) {
-.col-sm-2 {
+.cl-sm-2 {
 	flex: 0 0 16%;
 	max-width: 16%;}
 }
 
 @media (min-width: 576px) {
-    .col-sm-5 {
+    .cl-sm-01 {
     
     display: flex;
     max-width: 41%;}
 }
 
 @media (min-width: 576px) {
-    .col-sm-7 {
+    .cl-sm-02 {
     
     display: flex;
     max-width: 58%;}
